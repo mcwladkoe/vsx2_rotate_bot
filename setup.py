@@ -1,10 +1,8 @@
 from setuptools import setup, find_packages
 
 requires = [
-    'flask',
-    'flask_bootstrap',
-    'waitress',
     'python-telegram-bot',
+    'vsx2_rotate @ git+https://github.com/mcwladkoe/vsx2_rotate',
 ]
 
 setup(
@@ -19,9 +17,6 @@ setup(
     install_requires=requires,
     entry_points="""\
         [console_scripts]
-        rotate_text_bot = rotate_text.bot:main
-    """,
-    dependency_links=[
-        "git+https://github.com/mcwladkoe/vsx2_rotate",
-    ]
+        vsx2_rotate_text_bot_run = vsx2_rotate_text_bot.bot:main
+    """
 )
